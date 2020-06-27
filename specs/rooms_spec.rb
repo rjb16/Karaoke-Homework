@@ -13,6 +13,7 @@ class TestRoom < Minitest::Test
         @room_1 = Room.new("The best room")
         @room_2 = Room.new("A mediocre room")
         @guest_1 = Guest.new("Fred")
+        @song_1 = Song.new("Bohemian Rhapsody")
        
     end
 
@@ -23,6 +24,11 @@ class TestRoom < Minitest::Test
     def test_can_add_guests
         @room_1.add_guest(@guest_1)
         assert_equal("Fred", @guest_1.name)
+    end
+
+    def test_can_add_songs
+        @room_1.add_song(@song_1)
+        assert_equal("Bohemian Rhapsody", @song_1.name)
     end
 
   
