@@ -4,7 +4,15 @@ class Room
 
     def initialize(name)
         @name = name
+        @guests = []
+        
     
     end
+
+    def add_guest(guest)
+        @guests << guest
+    end
+
+    
 
 end
