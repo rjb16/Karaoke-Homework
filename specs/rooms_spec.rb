@@ -11,7 +11,7 @@ class TestRoom < Minitest::Test
 
     def setup()
         @room_1 = Room.new("The best room")
-        @room_2 = Room.new("A mediocre room")
+        @room_2 = Room.new("A mediocre room", [@guest_1], [@song_1])
         @guest_1 = Guest.new("Fred")
         @song_1 = Song.new("Bohemian Rhapsody")
        
@@ -21,14 +21,15 @@ class TestRoom < Minitest::Test
         assert_equal("The best room", @room_1.name)
     end
 
-    def test_can_add_guests
-        @room_1.add_guest(@guest_1)
-        assert_equal("Fred", @guest_1.name)
+    def test_add_guest_to_room()
+        @room_1.add_guest_to_room(@guest_1)
+        assert_equal()
     end
 
-    def test_can_add_songs
-        @room_1.add_song(@song_1)
-        assert_equal("Bohemian Rhapsody", @song_1.name)
+    def test_add_song_to_room()
+        @song_1.add_song_to_room(@room_1)
+        assert_equal()
+       
     end
 
   

@@ -5,17 +5,17 @@ class Room
     def initialize(name)
         @name = name
         @guests = []
-        @songs = []
+        @playlist = []
         
     
     end
 
-    def add_guest(guest)
+    def add_guest_to_room(guest)
         @guests << guest
     end
 
-    def add_song(song)
-        @songs << song
+    def add_song_to_room(song)
+        @playlist << song
     end
 
     
