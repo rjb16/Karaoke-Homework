@@ -23,12 +23,12 @@ class TestRoom < Minitest::Test
 
     def test_add_guest_to_room()
         @room_1.add_guest_to_room(@guest_1)
-        assert_equal()
+        assert_equal(1, @room_1.number_of_guests())
     end
 
     def test_add_song_to_room()
-        @song_1.add_song_to_room(@room_1)
-        assert_equal()
+        @room_1.add_song_to_room(@song_1)
+        assert_equal(1, @room_1.number_of_songs())
        
     end
 
